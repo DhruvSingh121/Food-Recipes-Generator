@@ -43,12 +43,58 @@ form button[type="submit"] {
   color: white;
   cursor: pointer;
 }
-form button[type="submit"]:hover {
+form button[type="submit"]:hover,
+.recipe button:hover {
   background-color: #e34848;
 }
+
+/* main Section */
 .recipe-container {
   text-align: center;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+  place-items: center;
+}
+
+.recipe {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 350px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.recipe img {
+  height: 300px;
+  border-radius: 8px;
+  transform: scale(0.95);
+}
+.recipe h3 {
+  font-size: 24px;
+  padding: 0px 5px;
+  margin-block: 5px;
+}
+.recipe p {
+  font-size: 16px;
+  /* margin: 2px 0px; */
+  color: #4a4a4a;
+}
+.recipe button {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #e52020;
+  color: white;
+  margin: 18px auto;
+  padding: 5px 10px;
+  transition: backgroud-color 0.2s ease-in-out;
 }
 /* responsive code */
 @media screen and (max-width: 600px) {
